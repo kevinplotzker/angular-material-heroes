@@ -1,0 +1,18 @@
+
+<mat-card style="max-width: 400px;">
+  <mat-card-header>
+    <h2>{{hero.name | uppercase}} Details</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <div><span>id: </span>{{hero.id}}</div>
+    <div><span>name: </span>{{hero.name}}</div>
+  </mat-card-content>
+  <mat-card-actions>
+    <form>
+      <mat-form-field>
+        <input matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="hero.name" placeholder="Update Name" />
+      </mat-form-field>
+    </form>
+  </mat-card-actions>
+</mat-card>
+
