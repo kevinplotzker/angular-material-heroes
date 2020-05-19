@@ -1,0 +1,14 @@
+<mat-card style="max-width: 400px;" *ngIf="componentHero">
+  <mat-card-header>
+    <h2>{{componentHero.name | uppercase}} Details</h2>
+  </mat-card-header>
+  <mat-card-content>
+    <div><span>id: </span>{{componentHero.id}}</div>
+    <form>
+      <mat-form-field>
+        <input matInput [ngModelOptions]="{standalone:true}" [(ngModel)]="componentHero.name" placeholder="name"/>
+      </mat-form-field>
+    </form>
+    <button (click)="goBack()">go back</button>
+  </mat-card-content>
+</mat-card>

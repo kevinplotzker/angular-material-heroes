@@ -1,5 +1,19 @@
 <mat-toolbar color="accent">
+  <button (click)="toggle()" mat-icon-button aria-label="Example icon button with a vertical three dot icon">
+    <mat-icon>more_vert</mat-icon>
+  </button>
   <h1>{{title}}</h1>
 </mat-toolbar>
-<app-heroes></app-heroes>
-<mat-slider min="1" max="100" step="1" value="1"></mat-slider>
+<!--<mat-sidenav-container>-->
+  <!--<mat-sidenav mode="side" [(opened)]="opened">-->
+    <nav>
+      <a routerLink="/heroes">Heroes</a>
+      <a routerLink="/dashboard">Dashboard</a>
+    </nav>
+  <!--</mat-sidenav>-->
+  <!--<mat-sidenav-content>-->
+    <app-messages></app-messages>
+    <router-outlet></router-outlet>
+  <!--</mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+
